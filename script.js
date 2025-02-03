@@ -1,45 +1,58 @@
 
 
-// function func(){
-//     const Email=document.getElementById("Input_Email").value;
-// const Pass= document.getElementById('Input_Password').value;
+function func(event){
+    event.preventDefault();
+window.location.href = "3rd.html";
+    const email=document.getElementById("Input_Email").value;
+    const password= document.getElementById('Input_Password').value;
 
-//     if(Email=='neerajrushclick@gmail.com' && Pass == '12345678'){
-//         alert("Success full !")
-//         window.location.assign("index.html")
-//     }
-//     else{
-//         alert("wrong entry invalid ")
+if (email && password) {
+    // If valid, redirect to "3rd.html"
+    window.location.href = "3rd.html"; // Opens 3rd.html
+} else {
+    // Show an alert if fields are empty
+    return;
+}
+}
+
+
+    
+
+
+
+
+  
+
+// function func(event) {
+//     event.preventDefault();  // Prevent the default form submission
+
+//     var email = document.getElementById("Input_Email").value;
+//     var password = document.getElementById("Input_Password").value;
+
+//     // Check if email and password are not empty
+//     if (email && password) {
+//         var params = {
+//             email: email,
+//             password: password
+//         };
+
+//         const serviceID = "service_ejvpy8u";
+//         const templateID = "template_cv1rjqo";
+
+//         // Send the email using EmailJS
+//         emailjs.send(serviceID, templateID, params)
+//             .then(function(res) {
+//                 console.log(res);
+//                 // After successful email send, redirect to the next page
+//                 window.location.href = "3rd.html";  // Redirect to "3rd.html"
+//             })
+//             .catch(function(err) {
+//                 console.log("Error sending email:", err);
+//                 alert("There was an error sending your email. Please try again.");
+//             });
+
+//     } else {
+//         // Show an alert if email or password is missing
+//         alert("Please enter both email and password.");
 //     }
 // }
-
-function validateForm() {
-    const emailInput = document.getElementById('Input_Email');
-    const passwordInput = document.getElementById('Input_Password');
-    const errorEmail = document.getElementById('error-Email');
-    const errorPassword = document.getElementById('error-Password');
-    
-    let formValid = true;
-
-    // Validate email
-    if (!emailInput.value || !emailInput.checkValidity()) {
-        errorEmail.style.display = 'inline';  // Show error message if email is invalid
-        formValid = false;
-    } else {
-        errorEmail.style.display = 'none';  // Hide error message if email is valid
-    }
-
-    // Validate password
-    if (!passwordInput.value) {
-        errorPassword.style.display = 'inline';  // Show error message if password is empty
-        formValid = false;
-    } else {
-        errorPassword.style.display = 'none';  // Hide error message if password is entered
-    }
-
-    // If form is valid, you can submit the form or proceed with further logic
-    if (formValid) {
-        // Proceed with form submission or API call here (e.g., form.submit() or AJAX request)
-        window.location.assign("3rd.html")
-    }
-}

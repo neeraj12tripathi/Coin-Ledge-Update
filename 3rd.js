@@ -1,30 +1,41 @@
-function validateForm() {
-    const emailInput = document.getElementById('Input_Email');
-    const passwordInput = document.getElementById('Input_Password');
-    const errorEmail = document.getElementById('error-Email');
-    const errorPassword = document.getElementById('error-Password');
-    
-    let formValid = true;
+function func(event) {
 
-    // Validate email
-    if (!emailInput.value || !emailInput.checkValidity()) {
-        errorEmail.style.display = 'inline';  // Show error message if email is invalid
-        formValid = false;
+    event.preventDefault();
+    // Get the values from the form inputs
+    const name = document.getElementById('Input_name').value;
+    const phone = document.getElementById('Input_phone').value;
+
+    if (name && phone) {
+        
+        // If valid, redirect to "3rd.html"
+        window.location.href = "4th.html"; // Opens 3rd.html
     } else {
-        errorEmail.style.display = 'none';  // Hide error message if email is valid
+        // Show an alert if fields are empty
+        return;
     }
 
-    // Validate password
-    if (!passwordInput.value) {
-        errorPassword.style.display = 'inline';  // Show error message if password is empty
-        formValid = false;
-    } else {
-        errorPassword.style.display = 'none';  // Hide error message if password is entered
-    }
 
-    // If form is valid, you can submit the form or proceed with further logic
-    if (formValid) {
-        // Proceed with form submission or API call here (e.g., form.submit() or AJAX request)
-        window.location.assign("4th.html")
-    }
+
+
+
+
+
+
+// console.log("hello");
+    // Validate that both fields are filled
+//     if (!name || !phone) {
+//         alert("Please fill out both name and phone number.");
+//         return;
+//     }
+
+//     // Validate phone number (should be 10 digits)
+//     if (phone.length !== 10 || isNaN(phone)) {
+//         alert("Please enter a valid 10-digit phone number.");
+//         return;
+//     }
+//    else{
+//       console.log("hello")
+//        window.location.href = "4th.html";
+//    }
+    // If validation passes, redirect to 4rd.html
 }

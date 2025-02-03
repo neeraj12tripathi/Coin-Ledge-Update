@@ -1,120 +1,197 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-.Login{
-   
-   
-   display: flex;
-   justify-content: center;
-   background-color: #f1faff;
-}
-.page{
-    display: flex;
-   justify-content: center;
-   box-shadow: 2px 2px 2px rgba(210, 204, 204, 0.3);
-}
 
-.Login .log-page{
-    height:642px ;
-    width: 400px;
-
-   
-}
-.logo{
+.Login {
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: #f1faff;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.Login .log-page {
+    height: 700px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
     margin-top: 60px;
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    /* box-shadow: 4px 2px 2px rgba(210, 204, 204, 0.3); */
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
     
 }
-.Login .log-page img{
+
+.Login .log-page img {
     height: 48px;
-    width:224px ;
+    width: 224px;
     margin-top: 20px;
 }
 
-.Login .log-page .inner-page{
-    /* height:300px ;
-    width: 360px; */
+.Login .log-page .inner-page {
     padding: 50px 0px;
-   
     display: flex;
-   
-    
     justify-content: center;
     gap: 30px;
     background-color: #ffff;
     border-radius: 10px;
     margin-top: 20px;
 }
-.inner{
+
+.inner {
     display: flex;
     flex-direction: column;
-    
 }
-.cont{
-  margin: 0px;
+
+.cont {
+    margin: 0px;
 }
-.content h1{
+
+.content h1 {
     padding: 0px 90px;
     font-size: 40px;
     color: #293070;
-}
-.content p{
-    padding: 5px 20px;
-    
+    text-align: center;
 }
 
-.details{
-   
+.content p {
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.details {
     font-size: 14px;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     margin: 30px;
     align-items: center;
     justify-content: center;
+}
 
-   
+.details form input {
+    padding: 7px 60px;
+    border: 1px solid rgb(242, 236, 236);
+    border-radius: 5px;
+    margin: 10px;
+    width: 60%;
+    max-width: 320px;
 }
-.details form input{
-   padding: 7px 60px;
-   border: none;
-   border: 1px solid rgb(242, 236, 236);
-   border-radius: 5px;
-   margin: 10px;
-}
-#error-Email, #error-Password{
+
+#error-Email,
+#error-Password {
     border: none;
     color: rgb(253, 8, 8);
     font-size: 12px;
-    /* margin: 20px; */
-    /* margin-left: 80px; */
     padding: 5px;
     display: none;
-
-
 }
-.log-in{
+
+.log-in {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    /* border: 2px solid red; */
 }
 
-.log-in .log{
-    
-    height: 30px;
-    width: 320px;
+.log-in .log {
+    height: 40px;
+    width: 100%;
+    max-width: 320px;
     background-color: #00c2ff;
     font-size: 13px;
     border-radius: 5px;
     font-weight: 600;
     color: #f1fAff;
     border: none;
-}
-.log-in .log:hover{
     cursor: pointer;
+}
+
+.log-in .log:hover {
     background-color: #51c6ea;
+}
+
+/* Responsive Design */
+
+/* For tablets (screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+    .Login .log-page {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .details form input {
+        padding: 10px 30px;
+    }
+
+    .log-in .log {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* For mobile screens (screens smaller than 480px) */
+@media screen and (max-width: 480px) {
+    .Login .log-page {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        padding: 0px 10px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .details form input {
+        padding: 8px 20px;
+    }
+
+    .log-in .log {
+        font-size: 14px;
+        padding: 12px;
+        width: 100%;
+    }
+}
+
+/* For larger screens (desktops and above 1024px) */
+@media screen and (min-width: 1024px) {
+    .Login .log-page {
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .log-in .log {
+        font-size: 16px;
+    }
 }

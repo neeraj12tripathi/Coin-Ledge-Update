@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coin Ledger</title>
+    <link rel="shortcut icon" type="x-icon" href="https://d392zik6ho62y0.cloudfront.net/images/coin-ledger-logo.png">
  <link rel="stylesheet" href="4th.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSZQM9ENNJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSZQM9ENNJ');
+</script>
 </head>
 <body>
     <div class="main">
@@ -31,7 +43,7 @@
                
                 <div class="log-in" >
                     
-                    <button class="log" onclick="validateForm()"> Ask Expert</button>
+                    <button class="log" onclick="openChat()" > Ask Expert</button>
                 </div>
     
                    
@@ -47,18 +59,29 @@
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/678e27323a84273260719a0f/1ii1ki7ou';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+  function openChat() {
+      if (typeof Tawk_API !== 'undefined') {
+                Tawk_API.toggle(); // Opens or toggles the chat box
+            } else {
+                alert('Chat is not available at the moment. Please try again later.');
+            }
+        }
+
+
+        <!--Start of Tawk.to Script-->
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/679b51c53a84273260773f4c/1iirber9d';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
    
-    <script src="3rd.js"></script>
+    
 </body>
 </html>
